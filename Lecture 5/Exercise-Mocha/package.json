@@ -1,0 +1,17 @@
+{
+  "name": "exercise-mocha",
+  "version": "1.0.0",
+  "description": "Exercise Mocha",
+  "main": "Exercise.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "Riccardo",
+  "license": "ISC",
+  "devDependencies": {
+    "mocha": "^6.0.0"
+  }
+}

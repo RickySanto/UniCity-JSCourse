@@ -1,0 +1,15 @@
+Link to portal https://moodle.city.ac.uk/course/view.php?id=27954
+To do some programming challenges:
+https://www.hackerrank.com/?utm_medium=cpc&utm_source=google&utm_campaign=Branded%7CSearch%7CExact%7CIbex.Digital&utm_content=329239107244&gclid=Cj0KCQiAheXiBRD-ARIsAODSpWMLdUqPQbtpMkCG0ojFRm6SDsCl015LI_-CxQEeb089-BaiyUon6eUaAm_KEALw_wcB
+
+to do home:
+go through all the example and check what they are doing
+
+books to read
+You don't know javascript
+
+User:
+aczr527
+
+
+Github /ArisMarko/javascriptexample
