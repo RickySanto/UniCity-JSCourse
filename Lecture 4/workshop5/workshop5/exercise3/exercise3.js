@@ -55,7 +55,7 @@ if (userInput !== null && saveButton !== null && resultEl !== null) {
         var newNode, // Element we will create
             itemDeleteButton, // Delete button for element
             itemModifyButton, // Modify button for element
-            submitted = userInput.value; // Text from form field
+            submitted = userInput.value // Text from form field
 
         // Check if user entered something
         if (submitted !== '') {
@@ -73,10 +73,22 @@ if (userInput !== null && saveButton !== null && resultEl !== null) {
 
             // add the p element to the page
             resultEl.appendChild(newNode);
+                console.log(submitted);
+            var addEvent = new Event ('Added',  {
+                detail: {
+                    "message": "value",
+                    "value": submitted
+                }           
+            });
+
+            document.dispatchEvent(addEvent);
 
             // Erase user's text from the textarea
             userInput.value = '';
         }
+
+        //add event handler
+
 
         // Stop the browser's default behaviour. By default, when a "button" within a "form"
         // element is clicked, the form gets submitted, resulting in a page reload (which we don't want)
@@ -89,6 +101,10 @@ if (userInput !== null && saveButton !== null && resultEl !== null) {
         if (event.target.classList.contains('item-delete')){
             event.preventDefault();
             resultEl.removeChild(event.target.parentNode);
+            //create custom event                
+            var removeEvent = new Event ('Deleted');
+            document.dispatchEvent(removeEvent);
+
         };
         
         if (event.target.classList.contains('item-modify')){           
@@ -100,6 +116,22 @@ if (userInput !== null && saveButton !== null && resultEl !== null) {
 
         };
     });
+
+    document.addEventListener(
+        'Added',
+        function (event) {
+            event.preventDefault();
+            console.log(event.detail);
+        }
+    );
+    
+    document.addEventListener(
+        'Deleted',
+        function (event) {
+            event.preventDefault();
+            console.log("Element Removed");
+        }
+    );
 
 };
 
